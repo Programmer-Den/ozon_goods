@@ -13,3 +13,7 @@ const db = mongoose.connection;
 
 db.on('error', err => console.error(err) );
 db.once('open', () => console.log('Подключено к СУБД') );
+
+app.use('/v2', require('./v2') ); // одинаковое начало маршрутов
+
+app.listen(3000, () => console.log('http://localhost:3000') );
