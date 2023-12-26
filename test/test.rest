@@ -1,0 +1,36 @@
+# Create | Update (для обновления нужно также ввести поле "id": )
+POST http://localhost:3000/v2/product/import
+Content-Type: application/json
+
+{
+  "name": "rice",
+  "weight": 1,
+  "price": 100
+}
+
+###
+
+# Read  (здесь пока только по айди)
+POST http://localhost:3000/v2/product/info
+Content-Type: application/json
+
+{ "id": "6588aa968e1dbda7551b8500" }
+
+###
+
+# Delete  (здесь только по айди, и только по форме образца внизу)
+POST http://localhost:3000/v2/products/delete
+Content-Type: application/json
+
+{
+  "products": [
+    {
+      "id": "6588ad3aa112ccda96d8e05d"
+    },
+    {
+      "id": "6588ad45a112ccda96d8e05f"
+    }
+  ]
+}
+
+###
